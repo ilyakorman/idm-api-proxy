@@ -22,7 +22,7 @@ app.use(function (req, res, next) {
 });
 
 // A route for POST requests sent to `/storyboard`
-app.post("/storyboard", function (req, res) {
+app.post("/storyboards/generate", function (req, res) {
   console.log("Received POST: " + JSON.stringify(req.body));
   return axios
     .post("https://usa-api.idomoo.com/api/v2/storyboards/generate", req.body)
