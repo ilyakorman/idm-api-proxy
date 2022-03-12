@@ -60,7 +60,7 @@ app.head("/forbidden", function (reg, res) {
     return res.sendStatus(403);
   }, 7000);
 });
-// Listen on port 8080
-var listener = app.listen(8080, function () {
+const PORT = process.env.PORT || 8080;
+var listener = app.listen(PORT, function () {
   console.log("Listening on port " + listener.address().port);
 });
